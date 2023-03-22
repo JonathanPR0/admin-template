@@ -30,11 +30,11 @@ export default function Autentication() {
   }
 
   return (
-    <section className="flex h-screen items-center justify-center">
-      <div className="hidden md:block md:w-1/2 lg:w-2/3">
-        <img src="https://source.unsplash.com/random" alt="Imagem da tela de autenticação" className="h-screen w-full object-cover" />
+    <section className="flex h-screen items-center justify-start sm:justify-center flex-col sm:flex-row ">
+      <div className="flex items-center justify-center w-screen sm:h-screen md:block md:w-1/2 lg:w-2/3">
+        <img src="https://source.unsplash.com/random" alt="Imagem da tela de autenticação" className="h-[250px] sm:h-screen w-full object-cover" />
       </div>
-      <div className="m-10 md:w-1/2 lg:w-1/3">
+      <div className="p-10 sm:m-10 md:w-1/2 lg:w-1/3">
         <h1 className="text-xl font-bold mb-5">
           {mode === "login" ? "Entre com Sua Conta" : "Cadastre-se na Plataforma"}
         </h1>
