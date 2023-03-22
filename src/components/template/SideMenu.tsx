@@ -1,13 +1,15 @@
+import useAuth from "@/data/hook/UseAuth";
 import { IconHome, IconSettings, IconBell, IconLogout } from "../icons";
 import Logo from "./Logo";
 import MenuItem from "./MenuItem";
 
 export default function SideMenu() {
+  const { logout } = useAuth()
   return (
     <aside className={`
     flex flex-col
     bg-gray-200 text-gray-9'00
-    dark:bg-gray-900 dark:text-gray-200  
+    dark:bg-gray-900 dark:text-gray-200 transition-colors 
     `}>
       <div className={`
         flex flex-col justify-center items-center
@@ -22,8 +24,8 @@ export default function SideMenu() {
         <MenuItem url="/notifications" text="Notifications" icon={IconBell} />
       </ul>
       <ul>
-        <MenuItem text="Logout" icon={IconLogout} onClick={() => console.log("Fazer o logout")
-        } className="text-red-600 dark:text-red-400 hover:bg-red-400 hover:text-white dark:hover:text-white" />
+        <MenuItem text="Logout" icon={IconLogout} onClick={logout}
+          className="text-red-600 dark:text-red-400 hover:bg-red-400 hover:text-white dark:hover:text-white" />
       </ul>
     </aside >
   )
