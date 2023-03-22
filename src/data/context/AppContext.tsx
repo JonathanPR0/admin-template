@@ -19,6 +19,7 @@ export function AppProvide(props: any) {
   }
 
   useEffect(() => {
+    localStorage.setItem("theme", "dark")
     const savedTheme = localStorage.getItem("theme");
     setTheme(savedTheme)
   }, [])

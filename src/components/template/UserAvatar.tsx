@@ -14,7 +14,7 @@ export default function UserAvatar(props: UserAvatarProps) {
         src={user?.photoUrl ?? "/images/avatar.png"}
         alt="Avatar do usuário"
         className={`
-          h-10 w-10 rounded-full cursor-pointer 
+          min-h-10 min-w-10 max-h-10 max-w-10 rounded-full cursor-pointer 
           ${props.className}
         `}
       />
